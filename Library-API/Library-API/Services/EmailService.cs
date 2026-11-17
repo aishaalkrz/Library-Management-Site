@@ -18,7 +18,7 @@ namespace Library_API.Services
 
         public void SendEmail(string toEmail, string subject, string body)
         {
-            var fromEmail = "aishakrez@gmail.com"; 
+            var fromEmail = _configuration.GetSection("Constants:FromEmail").Value ?? string.Empty;
             var appPassword = _configuration.GetSection("Constants:AppPassword").Value ?? string.Empty;
 
             try
