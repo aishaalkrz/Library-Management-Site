@@ -1,8 +1,10 @@
 # Library Management System
 
-A web system for running a university library: students register and borrow books, and librarians approve accounts, manage the catalog, track returns and handle late fines.
+The backend API for a university library system: students register and borrow books, and librarians approve accounts, manage the catalog, track returns and handle late fines.
 
-**Stack:** ASP.NET Core 8 Web API · Entity Framework Core · SQL Server · JWT authentication · Angular
+This repository contains the ASP.NET Core API. The Angular frontend isn't included.
+
+**Stack:** ASP.NET Core 8 Web API · Entity Framework Core · SQL Server · JWT authentication · Swagger
 
 ## Features
 
@@ -30,7 +32,6 @@ Library-API/
     Context/       EF Core DbContext
     Migrations/    Database migrations
     Services/      JwtService (tokens), EmailService (SMTP)
-Library-UI/        Angular frontend
 ```
 
 ## Running the API locally
@@ -53,4 +54,4 @@ Library-UI/        Angular frontend
    ```
 4. Open `/swagger` on the URL the API prints to try the endpoints.
 
-The API accepts requests from the Angular app on `http://localhost:4200`.
+CORS allows a frontend running on `http://localhost:4200`, the default Angular dev server.
